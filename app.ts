@@ -118,3 +118,42 @@ console.log(3 ** 4)
 //4. จงเขียน code เพื่อหาค่า x เท่ากับ 6 มาคูณ 20 โดยใช้ "การดำเนินการแบบย่อ"
 let x = 6
 x *=20
+
+//Homework (Object)
+interface Student {
+  isAlive: boolean,
+  firstName: string,
+  lastName: string,
+  age: number,
+  address: object,
+  isActive?: boolean
+}
+//1. ประกาศ object ชื่อ student โดยมี property อะไรก็ได้ 5 ชนิด (boolean, string, number, object)
+const student:Student = {
+  isAlive: false,
+  firstName: "Prayuth",
+  lastName: 'Jun-O-che',
+  age: 67,
+  address: {
+    country: "Thailand",
+    city: "Bangkok",
+    district: "Yannawa",
+    subDistrict: "Bang-pong-pang"
+  }
+}
+//2. จากนั้น ทำการ clone object โดยการใช้ Assign ออกมาให้เป็น student2 และทำการเปลี่ยนค่า property อันนึงของ student2 ให้กลายเป็น null
+const student2 = Object.assign({}, student)
+//3. ทำการวน loop ให้ print key และ value ของ studen2 ทั้งหมดออกมา
+const logObject = (object:Student) => {
+  for(let key in object){
+    console.log(`${key}: ${object[key]}`)
+  }
+}
+logObject(student2)
+//4. ทำการเพิ่ม property ของ student2 เป็น property ชื่อว่า isActive โดยมีค่าเป็น true
+student2.isActive = true
+logObject(student2)
+
+//5. ทำการลบ property isActive ทิ้งซะ
+delete student2.isActive
+logObject(student2)
