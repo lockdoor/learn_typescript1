@@ -71,8 +71,20 @@ console.log(Math.round(12.434))
 console.log(Math.round(31313.135))
 console.log(Math.round(42.809))
 
-//Homework (์ Number Part 3)
+//Homework ( Number Part 3)
 //ให้เขียน function random(min, max) ที่จะ random เลข float ตั้งแต่ min จนถึง max มาให้เรา (ไม่รวม max)
 function randomBetween(min:number, max:number){
   return Math.floor(Math.random()*(max - min)) + min
 }
+
+//Homework (Boolean part 1)
+//1. ทดลองประกาศ A เป็น False B เป็น True และ C เป็น False
+let A:boolean = false
+let B:boolean = true
+let C:boolean = false
+//2. จากข้อ 1 ถ้าเกิดนำมาเขียนในกรณี (A||(B&&C)) คำตอบที่ได้คืออะไร
+//คำตอบที่ได้คือ false
+//3. และจากข้อที่ 1 ถ้าเกิดเขียนในรูปแบบ (B||(A||C)) คำตอบที่ได้คืออะไร
+//คำตอบที่ได้คือ true
+//4. (B&&(A||C)) คำตอบที่ได้คืออะไร
+//คำตอบที่ได้คือ false
