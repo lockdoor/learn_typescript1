@@ -153,7 +153,13 @@ logObject(student2)
 //4. ทำการเพิ่ม property ของ student2 เป็น property ชื่อว่า isActive โดยมีค่าเป็น true
 student2.isActive = true
 logObject(student2)
-
 //5. ทำการลบ property isActive ทิ้งซะ
 delete student2.isActive
 logObject(student2)
+
+//Homework (Array)
+//1. ผลลัพท์ความยาวของ array คืออะไร
+let fruits = ['Apples', 'Pear', 'Orange'] //3
+let shoppingCart = fruits //3
+shoppingCart.push('Banana') //4
+
