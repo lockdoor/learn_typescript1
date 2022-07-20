@@ -23,3 +23,66 @@ console.log(text.toLowerCase()); //google and apple
 //3 ทดลองเปลี่ยน string 'hello world' โดยที่ให้ตัวอักษร h และ w เป็นตัวใหญ่
 text = 'hello world';
 console.log(text.replace(/h|w/gi, function (x) { return x.toUpperCase(); })); //Hello World
+//Homework (์ Number Part 1)
+//ทดลองแปลงจำนวนตามนี้ให้อยู่ในรูปแบบ e
+var num = 1e6; //1,000,000
+num = 1e7; //10,000,000
+num = 4.3e10; //43,000,000,000
+num = 12e-6; //0.000012
+num = 1234e-10; //0.0000001234
+//ทดลองแปลงจำนวน e ให้อยู่ในรูปแบบปกติ
+num = 10000000000; //1e10
+num = 200000; //2e5
+num = 12200000000; //122e8
+num = 0.00000001; //1e-8
+num = 0.00012; //12e-5
+//Homework (์ Number Part 2)
+//ทดลองประกาศเลขต่อไปนี้ให้อยู่ในรูปฐาน 8
+function numToSring(num, base) {
+    return num.toString(base);
+}
+console.log(numToSring(100, 8));
+console.log(numToSring(111, 8));
+console.log(numToSring(55, 8));
+console.log(numToSring(21, 8));
+console.log(numToSring(99, 8));
+//ทดลองประกาศเลขต่อไปนี้ให้อยู่ในรูปฐาน 16
+console.log(numToSring(100, 16));
+console.log(numToSring(111, 16));
+console.log(numToSring(55, 16));
+console.log(numToSring(21, 16));
+console.log(numToSring(99, 16));
+//ทดลองใช้ function math.round ในการปัดเศษจำนวนต่อไปนี้
+console.log(Math.round(12.434));
+console.log(Math.round(31313.135));
+console.log(Math.round(42.809));
+//Homework ( Number Part 3)
+//ให้เขียน function random(min, max) ที่จะ random เลข float ตั้งแต่ min จนถึง max มาให้เรา (ไม่รวม max)
+function randomBetween(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+//Homework (Boolean part 1)
+//1. ทดลองประกาศ A เป็น False B เป็น True และ C เป็น False
+var A = false;
+var B = true;
+var C = false;
+//2. จากข้อ 1 ถ้าเกิดนำมาเขียนในกรณี (A||(B&&C)) คำตอบที่ได้คืออะไร
+//คำตอบที่ได้คือ false
+//3. และจากข้อที่ 1 ถ้าเกิดเขียนในรูปแบบ (B||(A||C)) คำตอบที่ได้คืออะไร
+//คำตอบที่ได้คือ true
+//4. (B&&(A||C)) คำตอบที่ได้คืออะไร
+//คำตอบที่ได้คือ false
+//Homework (other type)
+//1. ทดลองใช้ typeof เพื่อเช็คประเภทของตัวแปรต่อไปนี้
+var a1 = false;
+console.log(typeof (a1)); //boolean
+var a2 = "ABD";
+console.log(typeof (a2)); //string
+var a3 = 113113;
+console.log(typeof (a3)); //number
+var a4 = null;
+console.log(typeof (a4)); //any
+var a5 = "";
+console.log(typeof (a5)); //string
+//let a6 = 13qed //error
+//console.log(typeof(a6)) //error

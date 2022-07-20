@@ -88,3 +88,18 @@ let C:boolean = false
 //คำตอบที่ได้คือ true
 //4. (B&&(A||C)) คำตอบที่ได้คืออะไร
 //คำตอบที่ได้คือ false
+
+//Homework (other type)
+//1. ทดลองใช้ typeof เพื่อเช็คประเภทของตัวแปรต่อไปนี้
+let a1 = false
+console.log(typeof(a1)) //boolean
+let a2 = "ABD"
+console.log(typeof(a2)) //string
+let a3 = 113113
+console.log(typeof(a3)) //number
+let a4 = null
+console.log(typeof(a4)) //object
+let a5 = ""
+console.log(typeof(a5)) //string
+//let a6 = 13qed //error
+//console.log(typeof(a6)) //error
