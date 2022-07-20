@@ -128,4 +128,28 @@ logObject(student2);
 //5. ทำการลบ property isActive ทิ้งซะ
 delete student2.isActive;
 logObject(student2);
+//Homework (Array)
+//1. ผลลัพท์ความยาวของ array คืออะไร
+let fruits = ['Apples', 'Pear', 'Orange']; //3
+let shoppingCart = fruits; //3
+shoppingCart.push('Banana'); //4
+//Homework (Array Method)
+//1. กำหนด String ที่ประกอบไปด้วย "Apple, Cat, Zoo, Bird, Dog" ให้ทำ String ที่ประกอบไปด้วยคำ 5 คำ แยกออกมาแล้วเก็บลงใน array ที่ชื่อว่า input โดยต้องเรียงลำดับตามตัวอักษร
+let strArr = "Apple, Cat, Zoo, Bird, Dog";
+let arr = strArr.split(',').map(item => item.trim());
+arr.sort();
+// console.log(arr) //['Apple', 'Bird', 'Cat', 'Dog', 'Zoo']
+//2. มี Array ที่ประกอบด้วย [123, 132, 423, 423, 12345, 5343, 53, 10904, 64] จงแสดงค่าจาก array ออกมา โดยที่ค่านั้นต้องขึ้นต้นด้วยเลข 1 เท่านั้น
+let numArr = [123, 132, 423, 423, 12345, 5343, 53, 10904, 64];
+let newNumArr = numArr.filter(item => item.toString()[0] === "1");
+//console.log(newNumArr) //[123, 132, 12345, 10904]
+//3. ["Apple", "Mango", "Cat", "Banana"] มี 1 element ไม่เข้าพวก จงใช้วิธีการ splice และแทนที่ค่าด้วยคำว่า "Orange" หลังจากนั้นให้ sort element ตามลำดับ Alphabet
+let fruit = ["Apple", "Mango", "Cat", "Banana"];
+fruit.splice(2, 1, "Orange");
+//console.log(fruit) //['Apple', 'Mango', 'Orange', 'Banana']
+//ลองใช้ find
+//console.log(fruit.find(item => item === 'Grape')) //undefined
+// console.log(fruit.find(item => item === 'Mango')) //Mango
+// ลองใช้ forEach
+fruit.forEach(item => console.log('I like ' + item));
 //# sourceMappingURL=app.js.map
