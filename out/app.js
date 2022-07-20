@@ -151,5 +151,32 @@ fruit.splice(2, 1, "Orange");
 //console.log(fruit.find(item => item === 'Grape')) //undefined
 // console.log(fruit.find(item => item === 'Mango')) //Mango
 // ลองใช้ forEach
-fruit.forEach(item => console.log('I like ' + item));
+// fruit.forEach(item => console.log('I like ' + item))
+// I like Apple
+// I like Mango
+// I like Orange
+// I like Banana
+//Homework Arrow Function
+//1. ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา พื้นที่ของสี่เหลื่ยมผืนผ้า
+const rectangleArea = (n) => n * n;
+//2. ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา จำนวนเฉพาะ
+const isPrime = (num) => {
+    if (num <= 1)
+        return false;
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0)
+            return false;
+    }
+    return true;
+};
+const primary = (begin, end) => {
+    // if(begin-end > 1000)
+    const arr = [];
+    for (let i = begin; i <= end; i++) {
+        if (isPrime(i))
+            arr.push(i);
+    }
+    return arr;
+};
+console.log(primary(1, 100));
 //# sourceMappingURL=app.js.map

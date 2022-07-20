@@ -186,3 +186,24 @@ fruit.splice(2, 1, "Orange")
 // I like Mango
 // I like Orange
 // I like Banana
+
+//Homework Arrow Function
+//1. ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา พื้นที่ของสี่เหลื่ยมผืนผ้า
+const rectangleArea = (n:number) => n * n
+//2. ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา จำนวนเฉพาะ
+const isPrime = (num:number) => {
+  if (num <= 1) return false
+  for (let i = 2; i < num; i++){
+    if(num % i === 0) return false
+  }
+  return true
+}
+const primary = (begin:number, end:number) => {
+  // if(begin-end > 1000)
+  const arr = []
+  for(let i = begin; i <= end; i++){
+    if(isPrime(i)) arr.push(i)
+  }
+  return arr
+}
+console.log(primary(1, 100))
