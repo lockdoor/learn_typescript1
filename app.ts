@@ -103,3 +103,18 @@ let a5 = ""
 console.log(typeof(a5)) //string
 //let a6 = 13qed //error
 //console.log(typeof(a6)) //error
+
+//Homework (ตัวดำเนินการเบื้องต้น)
+//1. จงแปลงค่าของ String "230" แล้ว print ออกมา
+let str = "230"
+let numStr = Number(str)
+console.log(numStr)
+//2. จงแปลงค่าของ Number 230 ให้เป็น String แล้ว print ออกมา
+num = 230
+let strNum = String(num)
+console.log(strNum)
+//3. จงเขียน code เพื่อหา 3 ยกกำลัง 4 แล้ว print ออกมาก
+console.log(3 ** 4)
+//4. จงเขียน code เพื่อหาค่า x เท่ากับ 6 มาคูณ 20 โดยใช้ "การดำเนินการแบบย่อ"
+let x = 6
+x *=20
