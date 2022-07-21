@@ -206,4 +206,34 @@ const primary = (begin:number, end:number) => {
   }
   return arr
 }
-console.log(primary(1, 100))
+// console.log(primary(1, 100))
+
+//Homework Interface
+// 1. ทดลองสร้าง interface file ที่ประกอบไปด้วยข้อมูลของบัตรประชาชน
+interface IdCard {
+  id: string,
+  firstName: string,
+  lastName: string,
+  born: Date,
+  religion: string,
+  address: string,
+  dateOfIssue: Date,
+  dateOfExpiry: Date
+}
+// 2. ทดลองสร้าง interface file ที่เรียกใช้งานซ้อนกัน ตัวอย่างเช่น
+/*
+  interface ..... {
+    test: import-interface
+  }
+*/
+interface Human {
+  name: string,
+  isAlive: boolean,
+  age: number,
+}
+interface Employee {
+  info: Human,
+  salary: number,
+  school: string,
+  enrollDate: Date,
+}
