@@ -237,3 +237,39 @@ interface Employee {
   school: string,
   enrollDate: Date,
 }
+
+// Homework Class
+// 1.  เขียน Code ตาม Video ให้เป็น Class และ Interface ออกมาให้ครบถ้วน
+// 2. ให้เพิ่ม code ใน Function ต่างๆ เช่น work() หรือ sleep() เมื่อ Class ทำการ Implement function นั้นๆ ให้เขียน Code console.log() ใส่เข้าไป ให้รู้ว่าทำงานที่ไหน เช่น ถ้าเป็น work() ของ Programmer ให้ มี code console.log("Programmer Work")
+interface Workable {
+  work(): void
+}
+class Programmer implements Workable{
+  firstName: string
+  lastName: string
+  salary: string
+
+  constructor(firstName: string, lastName: string){
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+
+  work(){
+    return console.log(`Programmer ${this.firstName} Work`)
+  }
+}
+// 3.จงเขียน code เพื่อหา 3 ยกกำลัง 4 แล้ว print ออกมา
+console.log(3 ** 4)
+// 4.ให้ทดสอบ code ของ Programmer work() และ CTO work()
+class CTO extends Programmer implements Workable{
+  constructor(firstName: string, lastName: string){
+    super(firstName, lastName)
+  }
+  work(){
+    return console.log(`CTO ${this.firstName} Work`)
+  }
+}
+const programmer = new Programmer("John", "Degree")
+const cto = new CTO("Alex", "Doll")
+programmer.work()
+cto.work()

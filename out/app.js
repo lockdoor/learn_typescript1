@@ -178,5 +178,28 @@ const primary = (begin, end) => {
     }
     return arr;
 };
-console.log(primary(1, 100));
+class Programmer {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    work() {
+        return console.log(`Programmer ${this.firstName} Work`);
+    }
+}
+// 3.จงเขียน code เพื่อหา 3 ยกกำลัง 4 แล้ว print ออกมา
+console.log(Math.pow(3, 4));
+// 4.ให้ทดสอบ code ของ Programmer work() และ CTO work()
+class CTO extends Programmer {
+    constructor(firstName, lastName) {
+        super(firstName, lastName);
+    }
+    work() {
+        return console.log(`CTO ${this.firstName} Work`);
+    }
+}
+const programmer = new Programmer("John", "Degree");
+const cto = new CTO("Alex", "Doll");
+programmer.work();
+cto.work();
 //# sourceMappingURL=app.js.map
